@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_courier_courier_user,courier.courier,model_courier_courier,,1,1,1,1
+access_courier_delivery_user,courier.delivery,model_courier_delivery,,1,1,1,1
+access_courier_charges_line_user,courier.charges.line,model_courier_charges_line,,1,1,1,1
+access_route_route_user,route.route,model_route_route,,1,1,1,1
+access_courier_route_line_user,courier.route.line,model_courier_route_line,,1,1,1,1
+access_city_city_user,city.city,model_city_city,,1,1,1,1
+access_courier_service_user,courier.service,model_courier_service,,1,1,1,1
+access_courier_res_partner_user,courier.res.partner,model_courier_res_partner,,1,1,1,1
+access_courier_type_user,courier.type,model_courier_type,,1,1,1,1

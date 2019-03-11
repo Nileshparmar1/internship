@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<odoo>
+	<record id="courier_route_view_form" model="ir.ui.view">
+		<field name="name">courier route form view</field>
+		<field name="model">route.route</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<group><field name="name"/></group>
+					</group>
+					<notebook>
+						<page string="Courier Route Lines" name="route_lines">
+							<field name="route_line">
+								<tree editable="bottom">
+									<field name="from_city" />
+									<field name="to_city"/>
+									<field name="distance"/>
+									<field name="hours"/>
+								</tree>
+							</field>
+							<group class="oe_subtotal_footer oe_right" colspan="0" name="total_distance">
+                                	<field name="total_distance" nolabel="1" class="oe_subtotal_footer_separator"/>
+                            </group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="courier_route_view_tree" model="ir.ui.view">
+		<field name="name">courier route tree view</field>
+		<field name="model">route.route</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record id ="action_courier_route" model="ir.actions.act_window">
+		<field name="name">Courier route</field>
+		<field name="res_model">route.route</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem id="courier_route" parent="courier_config_sub_menu"
+	name="Courier route" action="action_courier_route"/>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="courier_report">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<h2 align="center">Courier Report</h2>
+						<div>
+							<strong>Receiver Name:</strong>
+							<span t-field="doc.receiver" />
+						</div>
+						<div>
+							<strong>Expected Date:</strong>
+							<span t-field="doc.Expected_delivery_date"/>
+						</div>
+						<div>
+							<strong>Sender Name:</strong>
+							<span t-field="doc.sender"/>
+						</div>
+						<table class="table table-sm o_main_table">
+							<thead>
+								<tr>
+									<t t-set="colspan" t-value="5" />
+									<th class="text-left">Courier Name</th>
+									<th class="text-right">Type</th>
+									<th class="text-right">Weight</th>
+									<th class="text-right">Price</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

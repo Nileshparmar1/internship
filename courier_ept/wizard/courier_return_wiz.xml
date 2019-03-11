@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="courier_return_wizard_form">
+		<field name="name">courier return wizard form</field>
+		<field name="model">courier.return</field>
+		<field name="view_type">form</field>
+		<field name="view_model">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="name"/>
+				</group>
+				<footer>
+					<button string="Apply" type="object" name="set_return_reason" />
+					<button string="Cancel" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+</odoo>

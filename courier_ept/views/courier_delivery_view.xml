@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<odoo>
+	<record id="courier_delivery_view_form" model="ir.ui.view">
+		<field name="name">courier delivery form view</field>
+		<field name="model">courier.delivery</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<group><field name="courier_id"/></group>
+						<group><field name="type"/></group>
+					</group>
+					<notebook>
+						<page string="Courier charges Lines" name="order_lines">
+							<field name="courier_line">
+								<tree editable="bottom">
+									<field name="country_id" />
+									<field name="from_weight"/>
+									<field name="to_weight"/>
+									<field name="product_uom"/>
+									<field name="courier_amount"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="courier_delivery_view_tree" model="ir.ui.view">
+		<field name="name">courier delivery tree view</field>
+		<field name="model">courier.delivery</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="courier_id"/>
+				<field name="type"/>
+			</tree>
+		</field>
+	</record>
+	<record id="action_courier_delivery_ept" model="ir.actions.act_window">
+		<field name="name">Courier delivery</field>
+		<field name="res_model">courier.delivery</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="courier_delivery_ept" parent="courier_config_sub_menu"
+		name="Courier Delivery" action="action_courier_delivery_ept"/>
+</odoo>

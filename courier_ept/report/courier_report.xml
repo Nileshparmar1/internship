@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<report 
+	    id="action_report_courier"
+	    string="New / Delivered"
+	    model="courier.service" 
+	    report_type="qweb-pdf"
+	    file="courier_ept.courier_report" 
+	    name="courier_ept.courier_report"
+	    print_report_name="'courier_report - %s' % (object.courier_id)"/>
+</odoo>
